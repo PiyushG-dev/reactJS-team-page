@@ -1,0 +1,13 @@
+.container{
+    position: fixed;
+    width: 100%;
+    padding: 2vw 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.container p{
+    font-size: 18px;
+}

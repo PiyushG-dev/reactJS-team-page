@@ -1,0 +1,130 @@
+.wrapper{
+    padding:0vw 2vw;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.marquee_wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.marquee_wrapper.t_1{
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.marquee_wrapper h1{
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 240px;
+    text-transform: uppercase;
+    width: 100%;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0%{transform: translate(0%, -50%);}
+    50%{transform: translate(-10%, -50%);}
+    50.5%{transform: translate(-10%, -50%);}
+    100%{transform: translate(0%, -50%);}
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    width: 500px;
+    height: 700px;
+    z-index: 100;
+}
+
+.modal_images{
+    width: 100%;
+    height: 600px;
+}
+
+.img{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.img:nth-of-type(1){
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.info{
+    padding-top: 24px;
+}
+
+.role{
+    padding-top: 5px;
+}
+
+.t_1{
+    background: #fff;
+}
+
+.t_2{
+    background: #c4bca9;
+}
+
+.t_3{
+    background: #fff;
+}
+
+.t_4{
+    background: #8e908a;
+}
+
+.cursor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    z-index: 99;
+}
+
+@media(max-width:900px){
+    .modal{
+        width: 400px;
+        height: 600px;
+    }
+
+    .modal_images{
+        width: 100%;
+        height: 500px;
+    }
+
+    .img{
+        width: 100%;
+        height: 500px;
+    }
+}

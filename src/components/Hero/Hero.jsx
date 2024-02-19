@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Hero.module.css";
 import pf1 from "../../images/pf1.jpeg";
 import pf2 from "../../images/pf2.jpeg";
@@ -10,12 +10,12 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const cursor = useRef(null);
   const overlay = useRef(null);
-  // scenes
+  // scene refs
   const t_1 = useRef(null);
   const t_2 = useRef(null);
   const t_3 = useRef(null);
   const t_4 = useRef(null);
-  // images
+  // image refs
   const pf_1 = useRef(null);
   const pf_2 = useRef(null);
   const pf_3 = useRef(null);
@@ -29,6 +29,8 @@ const Hero = () => {
     { name: "Ethan Hawthorne", role: "Branding Specialist" },
   ];
 
+  // cursor fnc
+
   const handleMouseMove = (e) => {
     gsap.to(cursor.current, { x: e.pageX, y: e.pageY });
   };
@@ -41,7 +43,7 @@ const Hero = () => {
     gsap.to(cursor.current, { scale: 1, opacity: 1 });
   };
 
-  // left click
+  // left click / decrement
   const handleLeftClick = () => {
     setCurrentSlide((prev) => {
       if (prev > 1) {
@@ -90,7 +92,7 @@ const Hero = () => {
     console.log("left click");
   };
 
-  // right click
+  // right click /increment
 
   const handleRightClick = () => {
     setCurrentSlide((prev) => {
@@ -139,6 +141,8 @@ const Hero = () => {
 
     console.log("right click");
   };
+
+  // slide change
 
   const handleSlideChange = (e) => {
     const halfPageWidth = window.innerWidth / 2;

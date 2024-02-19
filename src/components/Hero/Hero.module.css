@@ -76,7 +76,7 @@ img{
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
-.img:nth-of-type(1){
+.img#t_1{
     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
 }
 
@@ -110,6 +110,10 @@ img{
     left: 0;
     font-size: 30px;
     z-index: 99;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #EE5C36;
 }
 
 @media(max-width:900px){
